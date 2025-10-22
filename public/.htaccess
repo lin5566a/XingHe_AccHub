@@ -1,0 +1,57 @@
+# ThinkPHP URL重写规则
+<IfModule mod_rewrite.c>
+    Options +FollowSymlinks -Multiviews
+    RewriteEngine On
+    
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]
+</IfModule>
+
+# 安全头设置
+<IfModule mod_headers.c>
+    # 防止MIME类型嗅探
+    Header always set X-Content-Type-Options nosniff
+    
+    # 防止点击劫持
+    Header always set X-Frame-Options SAMEORIGIN
+    
+    # XSS保护
+    Header always set X-XSS-Protection "1; mode=block"
+    
+    # 强制HTTPS（如果使用SSL）
+    # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+    
+    # 内容安全策略
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self';"
+    
+    # 隐藏服务器信息
+    Header unset X-Powered-By
+    Header unset Server
+</IfModule>
+
+# 防止访问敏感文件
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|inc|bak)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# 防止访问PHP配置文件
+<FilesMatch "^(config|database|common)\.php$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# 防止目录浏览
+Options -Indexes
+
+# 限制文件上传大小
+php_value upload_max_filesize 10M
+php_value post_max_size 10M
+
+# 禁用危险函数（如果可能）
+# php_value disable_functions "exec,passthru,shell_exec,system,proc_open,popen,curl_exec,curl_multi_exec,parse_ini_file,show_source"
+
+# 错误页面重定向
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html

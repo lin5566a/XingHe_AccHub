@@ -1,0 +1,41 @@
+# 根目录安全配置
+<IfModule mod_rewrite.c>
+    # 启用重写引擎
+    RewriteEngine On
+    
+    # 防止访问敏感目录
+    RewriteRule ^(application|thinkphp|extend|vendor|runtime|data)/ - [F,L]
+    
+    # 防止访问敏感文件
+    RewriteRule \.(htaccess|htpasswd|ini|log|sh|inc|bak|sql|md)$ - [F,L]
+    
+    # 重定向到public目录（保留ThinkPHP的入口）
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteCond %{REQUEST_URI} !^/index\.php
+    RewriteRule ^(.*)$ /public/$1 [L,QSA]
+</IfModule>
+
+# 安全头设置
+<IfModule mod_headers.c>
+    # 防止MIME类型嗅探
+    Header always set X-Content-Type-Options nosniff
+    
+    # 防止点击劫持
+    Header always set X-Frame-Options SAMEORIGIN
+    
+    # XSS保护
+    Header always set X-XSS-Protection "1; mode=block"
+    
+    # 隐藏服务器信息
+    Header unset X-Powered-By
+    Header unset Server
+</IfModule>
+
+# 防止目录浏览
+Options -Indexes
+
+# 防止访问敏感文件
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|inc|bak|sql|md|txt)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>

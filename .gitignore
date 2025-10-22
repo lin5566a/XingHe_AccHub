@@ -1,6 +1,171 @@
-composer.phar
-/vendor/
+# ThinkPHP 5.1 项目 .gitignore
 
-# Commit your application's lock file https://getcomposer.org/doc/01-basic-usage.md#commit-your-composer-lock-file-to-version-control
-# You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
-# composer.lock
+# ===========================================
+# 运行时文件
+# ===========================================
+/runtime/
+/public/static/
+/public/uploads/
+/public/temp/
+/uploads/
+/temp/
+
+# ===========================================
+# 敏感配置文件
+# ===========================================
+# 数据库配置
+application/database.php
+application/config.php
+application/common.php
+
+# 环境配置文件
+.env
+.env.local
+.env.production
+.env.development
+
+# ===========================================
+# 日志文件
+# ===========================================
+*.log
+runtime/log/
+logs/
+application/shell/monitor.log
+
+# Shell脚本（包含真实路径的）
+application/shell/CheckOrder.sh
+application/shell/CheckRechargeOrder.sh
+application/shell/monitor.sh
+
+# ===========================================
+# 测试文件
+# ===========================================
+test_*.php
+*_test.php
+*test*.php
+security_check.php
+test_website_access.php
+
+# ===========================================
+# 临时文件
+# ===========================================
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# ===========================================
+# 压缩包
+# ===========================================
+*.zip
+*.rar
+*.7z
+*.tar.gz
+*.tar.bz2
+
+# ===========================================
+# 系统文件
+# ===========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ===========================================
+# IDE 和编辑器文件
+# ===========================================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.project
+.settings/
+.classpath
+
+# ===========================================
+# 备份文件
+# ===========================================
+*.bak
+*.backup
+*_backup.*
+*.old
+*.orig
+
+# ===========================================
+# 文档和说明文件（项目特定的）
+# ===========================================
+# 功能说明文档
+*功能使用说明.md
+*功能测试命令*.md
+*功能代码检查报告.md
+*功能修正说明.md
+*兼容性修复说明.md
+*折扣逻辑说明.md
+*访客追踪功能使用说明.md
+*多端登录功能使用说明.md
+*商品折扣功能使用说明.md
+*商品视频功能*.md
+*客服设置增强功能*.md
+*渠道统计功能*.md
+*首页弹窗功能使用说明.md
+*地域限制功能使用说明.md
+*补货通知IP限制功能使用说明.md
+*通知中心功能使用说明.md
+*通知提示音功能使用说明.md
+
+# 安全相关文档
+security_fix_plan.md
+google_safe_browsing_review.md
+安全说明.md
+
+# ===========================================
+# 数据库迁移文件（保留主要的）
+# ===========================================
+# 保留主要的数据库文件，删除临时的
+database_user_sessions.sql
+database_user_sessions_fixed.sql
+database_product_video.sql
+database_channel_config.sql
+database_channel_stats.sql
+database_customer_service_enhancement.sql
+database_popup_config.sql
+database_product_id_optimization.sql
+database_product_video_simple.sql
+database_uuid_visitor_tracking.sql
+database_visitor_records_optimization.sql
+database_visitor_records_page_type_update.sql
+
+# 保留完整的数据库结构文件
+# database_complete.sql - 完整数据库结构（包含所有表）
+
+# ===========================================
+# 其他临时文件
+# ===========================================
+nginx.htaccess
+build.php
+CHANGELOG.md
+
+# ===========================================
+# Composer
+# ===========================================
+# 保留 composer.json 和 composer.lock
+# 但忽略 vendor/ 目录（如果需要的话）
+# vendor/
+
+# ===========================================
+# 其他
+# ===========================================
+# 隐藏文件
+.*
+!.gitignore
+!.htaccess
+!.env.example
+
+# 空目录
+**/.gitkeep
+

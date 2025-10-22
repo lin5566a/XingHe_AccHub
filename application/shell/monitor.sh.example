@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# 监控脚本示例
+# 请根据您的实际环境修改以下路径
+
+# 定义需要监控的shell脚本列表
+shell_scripts=(
+    "/path/to/your/project/application/shell/CheckOrder.sh"
+    "/path/to/your/project/application/shell/CheckRechargeOrder.sh"
+)
+
+# 日志文件路径
+log_file="/path/to/your/project/application/shell/monitor.log"
+
+# 循环检查每个shell脚本是否在运行
+for script in "${shell_scripts[@]}"
+do
+    script_name=$(basename "$script") # 获取脚本文件名
+
+    # 检查shell脚本是否已经在运行
+    if pgrep -f "$script_name" > /dev/null
+    then
+        # 脚本已经在运行，不做任何输出
+        :
+    else
+        # 脚本未运行，启动它
+        nohup bash "$script" >> "$log_file" 2>&1 &
+        echo "$(date) - Started shell script: $script_name" >> "$log_file"
+    fi
+done

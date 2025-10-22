@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# 充值订单检查脚本示例
+# 请根据您的实际环境修改以下路径
+
+while(true)
+do
+   # 修改为您的PHP路径
+   /usr/local/php-5.6/bin/php /path/to/your/project/think CheckRechargeOrder
+   # 修改为您的项目路径
+   /bin/sleep 1
+done
