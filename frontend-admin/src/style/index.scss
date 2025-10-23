@@ -1,0 +1,234 @@
+
+h1{
+    font-size: 2em;
+}
+.f12{
+    font-size: 12px;
+}
+.f13{
+    font-size: 13px;
+}
+.f14{
+    font-size: 14px;
+}
+.f16{
+    font-size: 16px;
+}
+.f18{
+    font-size: 18px;
+}
+.f22{
+    font-size: 22px;
+}
+.f32{
+    font-size: 32px;
+}
+.f48{
+    font-size: 48px;
+}
+.f09{
+    font-size: 0.9em;
+}
+.fb{
+    font-weight: 600;
+}
+.fb7{
+    font-weight: 700;
+}
+.blue-color{
+    color:#409eff;
+}
+.red-color{
+    color: #f56c6c;
+}
+.green-color{
+    color:#67c23a;
+}
+.yellow-color{
+    color:#e6a23c;
+};
+.gray-icon-color{
+    color:#909399;
+}
+.gray-text-color{
+    color:#606266;
+}
+.black-color{
+    color:#303133;
+}
+.ml5{
+    margin-left: 5px;
+}
+.ml8{
+    margin-left: 8px;
+}
+.ml15{
+    margin-left: 15px;
+}
+.ml12{
+    margin-left: 12px;
+}
+.ml10{
+    margin-left: 10px;
+}
+.ml20{
+    margin-left: 20px;
+}
+.mr12{
+    margin-right: 12px;
+}
+.mr10{
+    margin-right: 10px;
+}
+.mr18{
+    margin-right: 8px;
+}
+.mr20{
+    margin-right: 20px;
+}
+.mr32{
+    margin-right: 32px;;
+}
+.mt4{
+    margin-top: 4px;
+}
+.mt10{
+    margin-top: 10px;
+}
+.mt30{
+    margin-top: 30px;
+}
+.mb4{
+    margin-bottom: 4px;
+}
+.mb10{
+    margin-bottom: 10px;
+}
+.mb15{
+    margin-bottom: 15px;
+}
+.mb20{
+    margin-bottom: 20px;
+}
+.mb30{
+    margin-bottom: 30px;
+}
+.pt10{
+    padding-top: 10px;
+}
+.pb20{
+    padding-bottom: 20px;
+}
+.pl20{
+    padding-left: 20px;
+}
+.pr20{
+    padding-right: 20px;
+}
+.flex{
+    display: flex;
+}
+.flex-column{
+    flex-direction: column;
+}
+.flex-end{
+    justify-content: flex-end;
+}
+.flex-center{
+    justify-content: center;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.align-center{
+    align-items: center;
+}
+.align-top{
+    align-items: flex-start;
+}
+.flexBetweenCenter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.gap6{
+    gap: 6px;
+}
+.text-center{
+    text-align: center;
+}
+ 
+.el-button--small{
+    padding: 8px 15px;
+}
+.el-button+.el-button{
+    margin-left: 12px;
+}
+/* 添加表格选中行的样式 */
+//.el-checkbox__input.is-indeterminate .el-checkbox__inner ,
+.el-checkbox__input.is-checked .el-checkbox__inner
+{
+    // background-color: #67c23a;
+    // border-color: #67c23a;
+}
+.el-table{
+    &.el-table--small{
+        font-size: 14px;
+    }
+    .el-button--small {
+        font-size: 12px;
+        padding: 5px 11px;
+    }
+    .el-button{
+        &.el-button--text{
+            padding: 2px;
+        }
+        
+    }
+}
+.el-dialog{
+    padding:16px;
+    .el-dialog__header{
+        padding: 0;
+        padding-bottom: 16px ;
+        padding-right: 32px;
+    }
+    .el-dialog__body{
+        padding: 0;
+    }
+    .el-dialog__footer{
+        padding: 0;
+        padding-top: 16px;
+    }
+}
+
+.pagination-box{
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+.text-warning{
+    color: #f0ad4e;
+}
+.text-success{
+    color: #67c23a;
+}
+.text-info{
+    color: #909399;
+}
+.text-danger{
+    color:#f56c6c
+}
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+.text-btn-danger{
+    color: #f56c6c;
+    &:hover,&:focus{
+        color: #f56c6c;
+        opacity: 0.8;
+    }
+}

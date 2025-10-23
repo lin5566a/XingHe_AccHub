@@ -1,0 +1,41 @@
+{
+  "name": "new-shane-web",
+  "version": "0.1.1",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
+    "@vitejs/plugin-react": "^4.4.0",
+    "axios": "^1.8.4",
+    "core-js": "^3.8.3",
+    "dompurify": "^3.3.0",
+    "element-plus": "^2.9.7",
+    "js-cookie": "^3.0.5",
+    "md5": "^2.3.0",
+    "mitt": "^3.0.1",
+    "otpauth": "^9.4.0",
+    "otplib": "^12.0.1",
+    "react-icons": "^5.5.0",
+    "vue": "^3.2.13",
+    "vue-router": "^4.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "crypto-browserify": "^3.12.1",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "process": "^0.11.10",
+    "sass": "^1.32.7",
+    "sass-loader": "^12.0.0",
+    "stream-browserify": "^3.0.0"
+  }
+}

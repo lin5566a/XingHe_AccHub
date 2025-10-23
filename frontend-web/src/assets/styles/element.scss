@@ -1,0 +1,103 @@
+.el-button--primary {
+  --el-button-text-color: var(--el-color-white);
+  --el-button-bg-color: var(--primary-color);
+  --el-button-border-color: var(--primary-color);
+  --el-button-outline-color: var(--primary-color);
+  --el-button-active-color: var(--primary-color-dark);
+  --el-button-hover-text-color: var(--el-color-white);
+  --el-button-hover-link-text-color: var(--el-color-white);
+  --el-button-hover-bg-color: var(--primary-color-dark);
+  --el-button-hover-border-color: var(--primary-color-dark);
+  --el-button-active-bg-color: var(--primary-color-dark);
+  --el-button-active-border-color: var(--primary-color-dark);
+  --el-button-disabled-text-color: var(--el-color-white);
+  --el-button-disabled-bg-color: var(--primary-color-light-5);
+  --el-button-disabled-border-color: var(--primary-color-light-5);
+}
+:root{
+  
+  --el-color-primary: #1d4ed8;
+}
+
+
+.el-input__wrapper.is-focus{
+  box-shadow: 0 0 0 2px var(--primary-color) !important;
+}
+.primary-btn{
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  &:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+  }
+}
+.primary-plain{
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  &:hover {
+    color: var(--primary-dark);
+    border-color: var(--primary-dark);
+  }
+}
+.primary-link-btn{
+  color: var(--primary-color) !important;
+  &:hover{
+    color: var(--primary-dark) !important;
+  }
+}
+.success-link-btn{
+  color: rgb(22,163,74) !important;
+  &:hover{
+    color: var(--primary-dark) !important;
+  }
+}
+.el-tabs__item{
+  border-bottom-width: 2px;
+}
+.el-tabs__item.is-active{
+  color: var(--primary-dark) !important;
+}
+.el-tabs__item:not(.is-active):hover{
+  color: #374151 !important;
+  background-color: #f9fafb !important;
+  border-bottom-color: #d1d5db !important;
+}
+.el-tabs__active-bar{
+  background-color: var(--primary-color) !important;
+}
+
+.el-checkbox__input {
+  &.is-checked {
+    .el-checkbox__inner {
+      background-color: var(--primary-color)!important;
+      border-color: var(--primary-color)!important;
+    }
+  }
+}
+.el-checkbox__input {
+  .el-checkbox__inner {
+    &:hover {
+      border-color: var(--primary-color);
+    }
+  }
+}
+
+
+.profile-box {
+  .el-table {
+    :deep(.el-table__header) {
+      th {
+        background-color: #f9fafb;
+        color: #6b7280;
+        font-weight: 400;
+        font-size: .75rem;
+        line-height: 1rem;
+      }
+    }
+    :deep(.el-table__row) {
+      td {
+        color: #374151;
+      }
+    }
+  }
+}
