@@ -33,7 +33,7 @@
 
 ### 1. 克隆项目
 ```bash
-git clone https://github.com/your-username/xinghe-payment-system.git
+git clone https://github.com/lin5566a/XingHe_AccHub.git
 cd xinghe-payment-system
 ```
 
